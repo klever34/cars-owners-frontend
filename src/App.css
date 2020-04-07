@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+body {
+  font-family: 'Roboto Typeface', sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
