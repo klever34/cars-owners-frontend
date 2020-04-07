@@ -20,12 +20,8 @@ class App extends React.Component {
                 isLoading: true,
                 cars: [],
                 error: null,
-<<<<<<< HEAD
                 loading: true,
                 emptyCars: false
-=======
-                loading: true
->>>>>>> 01e70eef715b307231e31f44745b5645980d90d0
             };
             this.showFilters = this.showFilters.bind(this);
         }
@@ -39,11 +35,7 @@ class App extends React.Component {
 
         async fetchCars() {
             try {
-<<<<<<< HEAD
                 const response = await axios.get(`https://car-owners.herokuapp.com/cars`);
-=======
-                const response = await axios.get(`http://localhost:3000/cars`);
->>>>>>> 01e70eef715b307231e31f44745b5645980d90d0
                 let data = response.data.cars;
                     this.setState({
                       cars: data,
@@ -60,7 +52,6 @@ class App extends React.Component {
                 loading: true,
             }))
             try {
-<<<<<<< HEAD
                 const response = await axios.post(`https://car-owners.herokuapp.com/cars/find`, {
                     data
                 });
@@ -75,23 +66,11 @@ class App extends React.Component {
                     isLoading: false,
                     loading: false,
                 })
-=======
-                const response = await axios.post(`http://localhost:3000/cars/find`, {
-                    data
-                });
-                let res = response.data.cars;
-                    this.setState({
-                      cars: res,
-                      isLoading: false,
-                      loading: false,
-                    })
->>>>>>> 01e70eef715b307231e31f44745b5645980d90d0
             } catch (error) {
                 console.log(error)
             }
         }
 
-<<<<<<< HEAD
         async getFilters(){
             try {
                 const res = await axios.get('https://ven10.co/assessment/filter.json')
@@ -104,10 +83,6 @@ class App extends React.Component {
         componentDidMount() {
             this.fetchCars();
             this.getFilters();
-=======
-        componentDidMount() {
-            this.fetchCars();
->>>>>>> 01e70eef715b307231e31f44745b5645980d90d0
         }
         render() {
             const filters = [{
@@ -193,11 +168,7 @@ class App extends React.Component {
                             })
                     } </div> 
                     <h4 style={{marginTop: 20, padding: '20px'}} class={this.state.cars.length < 1 ? 'hidden' : ''}>Car Owners</h4>
-<<<<<<< HEAD
                     <h4 style={{marginTop: 20, padding: '20px'}} class="text-center">{this.state.emptyCars ? 'No Cars fit this description' : ''}</h4>
-=======
-                    <h4 style={{marginTop: 20, padding: '20px'}} class="text-center">{this.state.cars.length < 1 ? 'No Cars fit this description' : ''}</h4>
->>>>>>> 01e70eef715b307231e31f44745b5645980d90d0
                         {
                             this.state.cars.map((aCar, h) => {
                                 return (
