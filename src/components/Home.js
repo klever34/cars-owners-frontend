@@ -39,7 +39,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchCars();
+//     this.fetchCars();
   }
   render() {
     const filters = [
